@@ -18,3 +18,8 @@ configs:
   cm:
     #use annotation for tracking but keep labels for compatibility with other tools
     application.resourceTrackingMethod: annotation+label
+    repositories: |
+      - url: git@github.com:roojoom/rooj-prodops
+        sshPrivateKeySecret:
+          name: github-ssh-key
+          key:
