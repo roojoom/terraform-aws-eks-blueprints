@@ -71,7 +71,7 @@ resource "helm_release" "argocd_application" {
   set {
     name = "source.helm.valueFiles"
     value = each.value.values_file
-    type = "list"
+    type = "auto"
   }
 
   set {
