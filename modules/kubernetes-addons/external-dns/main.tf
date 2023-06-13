@@ -28,6 +28,8 @@ module "helm_addon" {
           provider: aws
           aws:
             region: ${var.addon_context.aws_region_name}
+          image:
+            tag: ${var.addon_context.image_tag}
         EOT
       ]
     },
