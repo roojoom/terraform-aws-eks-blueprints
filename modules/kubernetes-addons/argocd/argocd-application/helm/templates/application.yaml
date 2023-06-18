@@ -12,9 +12,6 @@ spec:
     targetRevision: {{ .Values.source.targetRevision }}
     path: {{ .Values.source.path }}
     helm:
-    {% {{- if ne .Values.source.helm.valueFiles "" }}
-      valueFiles: {{ toYaml .Values.source.helm.valueFiles }}
-    {{- else }}%}
       values: {{ toYaml .Values.source.helm.values | toString | indent 6 }}
   destination:
     server: {{ .Values.destination.server }}
